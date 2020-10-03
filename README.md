@@ -13,22 +13,24 @@
 	- Retention Modes in S3
 		- Governance mode:  in this mode it will not allow delete until you have specific permission to delete the object version.  There is an option to delete object or alter retention if required. 
 		- Compliance mode:  a WORM object version will not be deleted in this mode. Its majorly used for Compliance requirement like regulatory recordkeeping. 
-		- 
+			
+			<div>
+			<img src="images/object-lock.png" />
+			<img src="images/mode.png" />
+			</div>
 		  
 
 
 3. POC via AWS CLI to store documents for compliance requirement in compliance mode with specific retention period. 
 	- Put Object with retention period
 		- aws s3api put-object --bucket s3objectlock-worm --key worm/test.txt --body test.txt --object-lock-mode COMPLIANCE --object-lock-retain-until-date 2020-10-03
-		- 
+			<img src="images/put-object-with-compliance.png" />
 		- ETag and version details on S3 object - 
-		- 
+			<img src="images/review-object.png" />
 		- Reading the WORM object version - 
 		- aws s3api get-object --bucket s3objectlock-worm  --key worm/test.txt --version-id UEsrdn1oMEICF0fvwwXsDpj8a2tvReZ4
-		- 
+			<img src="images/get-object.png" />
 		- It means to get the accurate version of object we also need to store the object version Id with object key in client API. 
-	- Object Lock with Lifecycle rules
-		- 
 		  
 
 3. How to enable object Lock on existing bucket?
