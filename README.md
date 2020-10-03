@@ -1,5 +1,6 @@
 # S3 Object Lock - WORM Storage
-1. Create a new Bucket
+1. Create a new Bucket:
+
 		- Enable Object Lock
 		- Enable Versioning
 		- Enable Default Encryption
