@@ -1,9 +1,8 @@
 # S3 Object Lock - WORM Storage
 1. Create a new Bucket:
-
-		- Enable Object Lock
-		- Enable Versioning
-		- Enable Default Encryption
+	- Enable Object Lock
+	- Enable Versioning
+	- Enable Default Encryption
 2. Object lock can be configured with retention period or default period at the time of ingestion. 
 	- Ways of managing retention of an object in S3
 		- Retention period - Locked for defined period and can't be deleted or updated for that period
